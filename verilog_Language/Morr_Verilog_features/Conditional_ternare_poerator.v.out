@@ -1,0 +1,41 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\Code\iverilog\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\Code\iverilog\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\Code\iverilog\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\Code\iverilog\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\Code\iverilog\iverilog\lib\ivl\va_math.vpi";
+S_00000234b8a42720 .scope module, "top_module" "top_module" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /INPUT 8 "c";
+    .port_info 3 /INPUT 8 "d";
+    .port_info 4 /OUTPUT 8 "min";
+v00000234b8a42f60_0 .net *"_ivl_0", 0 0, L_00000234b8a725d0;  1 drivers
+v00000234b89b9630_0 .net *"_ivl_4", 0 0, L_00000234b8a71e50;  1 drivers
+v00000234b89b9fb0_0 .net *"_ivl_8", 0 0, L_00000234b8a72670;  1 drivers
+o00000234b8a77068 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v00000234b89bca50_0 .net "a", 7 0, o00000234b8a77068;  0 drivers
+v00000234b89bcaf0_0 .net "ab", 7 0, L_00000234b8a722b0;  1 drivers
+o00000234b8a770c8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v00000234b89bcb90_0 .net "b", 7 0, o00000234b8a770c8;  0 drivers
+o00000234b8a770f8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v00000234b8a428b0_0 .net "c", 7 0, o00000234b8a770f8;  0 drivers
+v00000234b8a42950_0 .net "cd", 7 0, L_00000234b8a71ef0;  1 drivers
+o00000234b8a77158 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v00000234b8a429f0_0 .net "d", 7 0, o00000234b8a77158;  0 drivers
+v00000234b8a42b20_0 .net "min", 7 0, L_00000234b8a720d0;  1 drivers
+L_00000234b8a725d0 .cmp/gt 8, o00000234b8a77068, o00000234b8a770c8;
+L_00000234b8a722b0 .functor MUXZ 8, o00000234b8a77068, o00000234b8a770c8, L_00000234b8a725d0, C4<>;
+L_00000234b8a71e50 .cmp/gt 8, o00000234b8a770f8, o00000234b8a77158;
+L_00000234b8a71ef0 .functor MUXZ 8, o00000234b8a770f8, o00000234b8a77158, L_00000234b8a71e50, C4<>;
+L_00000234b8a72670 .cmp/gt 8, L_00000234b8a71ef0, L_00000234b8a722b0;
+L_00000234b8a720d0 .functor MUXZ 8, L_00000234b8a71ef0, L_00000234b8a722b0, L_00000234b8a72670, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Conditional_ternare_poerator.v";
